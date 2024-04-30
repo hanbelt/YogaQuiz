@@ -1,0 +1,72 @@
+*, *::before, *::after {
+    box-sizing: border-box; /* p much always use border-box not content-box, theres no math needed to find actual size of box, 300x100 is entire size */
+}
+/* use this when making every website, to make sure every element uses border box */
+
+
+body, html{
+    height: 100%;
+    margin: 0;
+    }
+
+.bg{ 
+    background-image: url("https://images.wallpaperscraft.com/image/single/gradient_sky_sunset_176577_1920x1080.jpg");
+    /*background-repeat: repeat-x;  Not sure how its repeating only downwards without this line...
+    /*background-size: cover;  covers whole page */
+   /* height: 100%;  this was causing it to cover all text */
+}
+
+button{
+    transition: all 0.5s;
+    transform: rotate(0deg);
+    border-radius: 15px; /* rounded corners */
+    width: 150px;
+    height: 50px;
+    background: mistyrose;
+}
+
+.clicked { 
+    background: red;
+    }
+
+.clicked.correct{
+    background: green;
+    /*transform: rotate(360deg);*/
+    rotate: 360deg;
+}    
+
+.quiztitle{
+    text-align: center; /* makes whole question class centered ! */
+    padding: 50px; /* padding spaces out the item, shorthard is just sidepx and topbottompx */
+    font-size: 30px; /* played around w this to get size i like */
+}
+
+
+.question{
+    text-align: center; 
+    padding:  50px 100px ;  
+}  
+
+
+#smallpic{
+width: 500px;
+}
+
+#bigpic{
+width: 900px;
+}
+
+
+.box{
+    position: fixed;
+    text-align: center;
+    font-size: 32px;
+    background-color: mistyrose;
+    width: 175px;
+    height: 75px;
+    padding: 16px; /* this shortcut assigns padding in all 4 directions (space around content of box) */
+    border: 5px solid black; /* no commas, "solid" is one of seven cool border styles  */
+    margin: 20px; /* this shortcut assigns margin in all 4 directions (space around box) */
+    /* for different values in padding & margin, enter 2 3 or 4 values (no commas), they will apply clockwise */
+    border-radius: 15px;
+}
